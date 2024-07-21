@@ -186,3 +186,19 @@ function findProduct(arr) {
 }
 
 console.log(findProduct([0, -1, 2, -3, 4, -2]));
+
+function findFirstUnique(nums) {
+  for (let i = 0; i < nums.length; i++) {
+    let pointer2 = 0;
+    while (pointer2 < nums.length) {
+      if (nums[pointer2] === nums[i] && i !== pointer2) {
+        break;
+      }
+
+      pointer2++;
+    }
+    if (pointer2 === nums.length) {
+      return nums[i];
+    }
+  }
+}
